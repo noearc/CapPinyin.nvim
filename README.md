@@ -1,0 +1,1 @@
+# CapPinyin.nvim
