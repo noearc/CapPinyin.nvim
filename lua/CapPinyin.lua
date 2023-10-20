@@ -31,11 +31,17 @@ M.start = function()
   ["E"] = "e",
   ["B"] = "b",
   ["U"] = "u",
+  ["O"] = "o",
   ["DD"] = "dd",
   ["YY"] = "yy",
+  ["X"] = "x",
+  ["GG"] = "gg",
+  ["<C-U>"] = "<C-u>",
+  ["<C-D>"] = "<C-d>",
+  ["<C-R>"] = "<C-r>",
   })
   stackmap.push("PinyinI", "i", {
-    ["<Cap>"] = "<Esc>"
+    ["JK"] = "<Esc>"
   })
   print("Pinyin mode started")
   active = true
