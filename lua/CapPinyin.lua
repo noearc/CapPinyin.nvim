@@ -6,7 +6,6 @@
 -- ]]
 local M = {}
 
-local map = vim.keymap
 local stackmap = require("stackmap")
 local active = false
 
@@ -43,6 +42,12 @@ M.start = function()
   stackmap.push("PinyinI", "i", {
     ["JK"] = "<Esc>"
   })
+  stackmap.push("PinyinC", "c", {
+    ["JK"] = "<Esc>",
+    ["W"] = "w",
+    ["Q"] = "q",
+    ["S"] = "s",
+  })
   print("Pinyin mode started")
   active = true
 end
@@ -50,6 +55,7 @@ end
 M.clear = function()
   stackmap.pop("Pinyin", "n")
   stackmap.pop("PinyinI", "i")
+  stackmap.pop("PinyinC", "c")
   print("Pinyin mode cleared")
   active = false
 end
